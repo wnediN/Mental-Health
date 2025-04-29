@@ -25,8 +25,15 @@
 
   <main class="mt-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-3xl font-bold mb-8">Artistic Swimming Gallery</h1>
+      <h1 class="text-3xl font-bold mb-8">Photo Gallery</h1>
 
+      <!-- Upload Button at Top -->
+      <div class="mb-12">
+        <a href="#uploadSection" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md">
+          Upload Your Photo
+        </a>
+      </div>
+      
       <!-- Gallery Grid -->
       <div id="gallery" class="grid md:grid-cols-3 gap-8 mb-12">
         <!-- Existing Images -->
@@ -52,13 +59,13 @@
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
           <img src="https://insidesynchro.org/wp-content/uploads/2024/06/20230721_AMas_AM59818.jpg" alt="Inside Synchro Event" class="w-full h-64 object-cover mb-4 rounded-md">
           <p class="font-semibold text-lg mb-2">International Competition</p>
-          <p>Inside Synchro captures an amazing team moment.</p>
+          <p>Team USA's synchronized swimming performance captured during competition.</p>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
           <img src="https://www.usatoday.com/gcdn/presto/2021/08/07/USAT/a102e912-fc07-483d-a1dd-aac333ed2b69-TEAM_SYNCHRO_02.JPG?crop=5405,3041,x0,y215&width=3200&height=1801&format=pjpg&auto=webp" alt="USA Team Synchro" class="w-full h-64 object-cover mb-4 rounded-md">
           <p class="font-semibold text-lg mb-2">Team USA Synchro</p>
-          <p>Team USA's synchronized swimming performance captured during competition.</p>
+          <p>Strength and grace at the Tokyo Olympics.</p>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
@@ -69,14 +76,19 @@
       </div>
 
       <!-- Upload Section -->
-      <div class="bg-white p-8 rounded-lg shadow-md">
+      <div id="uploadSection" class="bg-white p-8 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-4">Upload Your Sport Photo</h2>
-        <p class="mb-6 text-gray-600">Share your athletic moments with our community!</p>
+        <p class="mb-6 text-gray-600">Share your athletic moments with a custom caption!</p>
+
         <input type="file" id="uploadInput" accept="image/*" class="block w-full mb-4 text-gray-700">
-        <button onclick="uploadImage()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+
+        <input type="text" id="captionInput" placeholder="Enter a caption for your photo" class="block w-full mb-6 px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-400">
+
+        <button onclick="uploadImage()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
           Upload
         </button>
       </div>
+
     </div>
   </main>
 
@@ -87,6 +99,8 @@
   <script>
     function uploadImage() {
       const input = document.getElementById('uploadInput');
+      const caption = document.getElementById('captionInput').value.trim();
+
       if (input.files && input.files[0]) {
         const reader = new FileReader();
         reader.onload = function (e) {
@@ -95,16 +109,19 @@
           newCard.className = "bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105";
           newCard.innerHTML = `
             <img src="${e.target.result}" alt="User Uploaded Photo" class="w-full h-64 object-cover mb-4 rounded-md">
-            <p class="font-semibold text-lg mb-2">Your Uploaded Photo</p>
+            <p class="font-semibold text-lg mb-2">${caption ? caption : 'Your Uploaded Photo'}</p>
             <p>Thank you for sharing your journey!</p>
           `;
           gallery.appendChild(newCard);
-          input.value = ''; // Reset the input
+
+          input.value = '';
+          document.getElementById('captionInput').value = '';
         };
         reader.readAsDataURL(input.files[0]);
+      } else {
+        alert("Please select a photo to upload.");
       }
     }
   </script>
 </body>
 </html>
-
