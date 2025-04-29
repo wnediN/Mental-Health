@@ -9,7 +9,7 @@
 <body class="bg-blue-50 text-gray-800">
   <header class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-      <a href="index.html" class="text-3xl font-bold text-blue-700">Mind Over Muscle</a>
+      <a href="index.html" class="text-3xl font-bold text-blue-700 hover:text-blue-500">Mind Over Muscle</a>
       <nav>
         <ul class="flex space-x-6">
           <li><a href="about.html" class="hover:text-blue-500">About</a></li>
@@ -24,34 +24,87 @@
   </header>
 
   <main class="mt-20 px-6">
-  <div class="max-w-6xl mx-auto text-center">
-    <h1 class="text-3xl font-bold mb-8">Artistic Swimming Gallery</h1>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- First image -->
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="https://www.mercurynews.com/wp-content/uploads/2024/07/Artistic_Swimming_Glance_Olympics_67291-1.jpg?w=1569" alt="Olympic Artistic Swimming" class="w-full h-64 object-cover mb-4 rounded-md">
-        <p class="font-semibold text-lg mb-2">Olympic Artistic Swimming Preview</p>
-        <p>Image from a preview of artistic swimming at the Paris Olympics.</p>
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-3xl font-bold mb-8">Artistic Swimming Gallery</h1>
+
+      <!-- Gallery Grid -->
+      <div id="gallery" class="grid md:grid-cols-3 gap-8 mb-12">
+        <!-- Existing Images -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+          <img src="https://www.mercurynews.com/wp-content/uploads/2024/07/Artistic_Swimming_Glance_Olympics_67291-1.jpg?w=1569" alt="Olympic Artistic Swimming" class="w-full h-64 object-cover mb-4 rounded-md">
+          <p class="font-semibold text-lg mb-2">Olympic Artistic Swimming Preview</p>
+          <p>Image from a preview of artistic swimming at the Paris Olympics.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+          <img src="https://kuow-prod.imgix.net/store/4fe7dec02b1901623f3b82bcbfa22ba6.jpg?ixlib=rails-4.3.1&fit=clip&crop=faces&auto=format&w=924&h=634&dpr=2&q=50" alt="Seattle Swimmers" class="w-full h-64 object-cover mb-4 rounded-md">
+          <p class="font-semibold text-lg mb-2">Seattle Swimmers Take Silver</p>
+          <p>Seattle-trained synchronized swimmers take silver at the Paris Olympics.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+          <img src="https://media.cbs8.com/assets/CCT/images/c145f6ea-ad76-46ce-ad12-86c7792fcde4/20240806T150007/c145f6ea-ad76-46ce-ad12-86c7792fcde4_1920x1080.jpg" alt="Artistic Swimming Scoring" class="w-full h-64 object-cover mb-4 rounded-md">
+          <p class="font-semibold text-lg mb-2">Artistic Swimming Rules and Scoring</p>
+          <p>An insightful look into the rules and scoring of artistic swimming at the Olympics.</p>
+        </div>
+
+        <!-- New Images You Sent -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+          <img src="https://insidesynchro.org/wp-content/uploads/2024/06/20230721_AMas_AM59818.jpg" alt="Inside Synchro Event" class="w-full h-64 object-cover mb-4 rounded-md">
+          <p class="font-semibold text-lg mb-2">International Competition</p>
+          <p>Inside Synchro captures an amazing team moment.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+          <img src="https://www.usatoday.com/gcdn/presto/2021/08/07/USAT/a102e912-fc07-483d-a1dd-aac333ed2b69-TEAM_SYNCHRO_02.JPG?crop=5405,3041,x0,y215&width=3200&height=1801&format=pjpg&auto=webp" alt="USA Team Synchro" class="w-full h-64 object-cover mb-4 rounded-md">
+          <p class="font-semibold text-lg mb-2">Team USA Synchro</p>
+          <p>Team USA's synchronized swimming performance captured during competition.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+          <img src="https://en.people.cn/mediafile/pic/BIG/20240806/33/9995309193135711245.png" alt="China Synchro" class="w-full h-64 object-cover mb-4 rounded-md">
+          <p class="font-semibold text-lg mb-2">Team China Performance</p>
+          <p>Chinese synchronized swimming team performing at a major event.</p>
+        </div>
       </div>
-      <!-- Second image -->
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="https://kuow-prod.imgix.net/store/4fe7dec02b1901623f3b82bcbfa22ba6.jpg?ixlib=rails-4.3.1&fit=clip&crop=faces&auto=format&w=924&h=634&dpr=2&q=50" alt="Seattle Swimmers" class="w-full h-64 object-cover mb-4 rounded-md">
-        <p class="font-semibold text-lg mb-2">Seattle Swimmers Take Silver</p>
-        <p>Seattle-trained synchronized swimmers take silver at the Paris Olympics.</p>
-      </div>
-      <!-- Third image -->
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="https://media.cbs8.com/assets/CCT/images/c145f6ea-ad76-46ce-ad12-86c7792fcde4/20240806T150007/c145f6ea-ad76-46ce-ad12-86c7792fcde4_1920x1080.jpg" alt="Artistic Swimming Scoring" class="w-full h-64 object-cover mb-4 rounded-md">
-        <p class="font-semibold text-lg mb-2">Artistic Swimming Rules and Scoring</p>
-        <p>An insightful look into the rules and scoring of artistic swimming at the Olympics.</p>
+
+      <!-- Upload Section -->
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Upload Your Sport Photo</h2>
+        <p class="mb-6 text-gray-600">Share your athletic moments with our community!</p>
+        <input type="file" id="uploadInput" accept="image/*" class="block w-full mb-4 text-gray-700">
+        <button onclick="uploadImage()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Upload
+        </button>
       </div>
     </div>
-  </div>
-</main>
-
+  </main>
 
   <footer class="mt-20 py-6 bg-white shadow-inner text-center text-gray-500">
     <p>&copy; 2025 Mind Over Muscle. All rights reserved.</p>
   </footer>
+
+  <script>
+    function uploadImage() {
+      const input = document.getElementById('uploadInput');
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const gallery = document.getElementById('gallery');
+          const newCard = document.createElement('div');
+          newCard.className = "bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105";
+          newCard.innerHTML = `
+            <img src="${e.target.result}" alt="User Uploaded Photo" class="w-full h-64 object-cover mb-4 rounded-md">
+            <p class="font-semibold text-lg mb-2">Your Uploaded Photo</p>
+            <p>Thank you for sharing your journey!</p>
+          `;
+          gallery.appendChild(newCard);
+          input.value = ''; // Reset the input
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+  </script>
 </body>
 </html>
+
